@@ -36,7 +36,7 @@ public class Cliente{
 	private String email;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties(value = "categoria", allowSetters = true)
+	@JsonIgnoreProperties(value = "cliente", allowSetters = true)
 	private List<Pedido> pedido;
 
 	public Long getId() {
